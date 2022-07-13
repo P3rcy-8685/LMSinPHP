@@ -3,6 +3,12 @@
 {% block title %}register Page{% endblock %}
 
 {% block body %}
+<ul style="display:inline">
+<li><a href="/login" >Login</a></li>
+<li><a href="/register" id="active">Register</a></li>
+</ul>
+<h1>Hello and Welcome!</h1>
+
     <form action="/register" method="post">
         <label for="name" id="ulabel">Name </label>
         <input type="text" name="name" id="uname""><br><br>
@@ -14,6 +20,5 @@
         <label for="admin" id="alabel">I am an Admin</label>
         <input type="radio" name="admin" value="2" id="admin"><br><br>
         <input type="submit" class="btn btn-primary" value="Submit" id="submit">
-        </form> <br><br><br><br><br><br>
-        <a href="/" id="login"><button>Already have an account? Login.</button> </a>
+        </form> 
 {% endblock %}

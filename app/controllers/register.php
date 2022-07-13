@@ -11,7 +11,7 @@ function generateRandomString($length = 5) {
 namespace Controller;
 class Register {
     public static function get() {
-        echo \View\Loader::make()->render('templates/register.twig');
+        echo \View\Loader::make()->render('templates/Login/register.twig');
     }
     public function post(){
         $name=$_POST["name"];
@@ -26,10 +26,9 @@ class Register {
         }
         $rand=generateRandomString();
         $pass=$pass.$rand;
-        echo $pass;
         $pass=hash('sha256',$pass);
         \Model\Post::register($name,$pass,$enr,$admin,$rand);
-        echo \View\Loader::make()->render("templates/login.twig", array(
+        echo \View\Loader::make()->render("templates/Login/login.twig", array(
             "registered"=>TRUE,
         ));
 

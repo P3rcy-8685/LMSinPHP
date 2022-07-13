@@ -1,0 +1,38 @@
+{% extends "templates/base.twig" %}
+
+{% block title %}register Page{% endblock %}
+
+{% block body %}
+<h1>Welcome Admin Sirrrrrrr</h1>
+<ul>
+<li><a href="/" >Home</a></li>
+<li><a href="/vrequest" id="active">View Requests</a></li>
+<li><a href="/areq">Admin Requests</a></li>
+<li><a href="/adminissue">Issued Books</a></li>
+<li><a href="/adminavail">View Available Books </a></li>
+<li><a href="/logout">Signout </a></li>
+</ul>
+<table>
+<tr>
+<th> Book Name </th>
+<th> Issued By?</th>
+<th> Approve?</th>
+<th> Confirm?</th>
+
+</tr>
+{% for post in posts %}
+<tr>
+    <td>{{post.name}}</td>
+    <td>{{post.Issued_by}}</td>
+    <form action="/aprove" method="post">
+    <input type="hidden" name="name" value={{post.name}}>
+    <input type="hidden" name="issuedby" value={{post.Issued_by}}>
+    <td><label for="Yes">Yes</label>
+    <input type="radio" name="aprove" value="1">
+    <label for="No">No</label>
+    <input type="radio" name="aprove" value="0"><br></td>
+    <td><input type="submit" class="btn btn-primary" value="Confirm"><br></td></form>
+</tr>
+{% endfor %}
+
+{% endblock %}

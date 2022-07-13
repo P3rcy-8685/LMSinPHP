@@ -11,5 +11,12 @@ Toro::serve(array(
     "/rejected"=>"\User\Reject",
     "/logout"=> "\Controller\Signout",
     "/pending"=>"\User\Pend",
-    "/book"=>"\User\NewIssue"
+    "/book"=>"\User\NewIssue",
+    "/addbook"=>"\Admin\Add",
+    "/vrequest"=>"\Admin\Request",
+    "/aprove"=>"\Admin\Request",
+    "/areq"=>"\Admin\Adminreq",
+    "/adminaprove"=>"\Admin\Adminreq",
+    "/adminissue"=>"\Admin\Issued",
+    "/adminavail"=>"\Admin\Available",
 ));

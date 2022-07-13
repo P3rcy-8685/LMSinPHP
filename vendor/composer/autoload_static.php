@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc19b1d3021670f918da0082687739aa0
+class ComposerStaticInitf40dce9a2ab10705e16fff3be29bf0cb
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -40,26 +40,34 @@ class ComposerStaticInitc19b1d3021670f918da0082687739aa0
     );
 
     public static $classMap = array (
+        'Admin\\Add' => __DIR__ . '/../..' . '/app/controllers/Admin.php',
+        'Admin\\Adminreq' => __DIR__ . '/../..' . '/app/controllers/Admin.php',
+        'Admin\\Available' => __DIR__ . '/../..' . '/app/controllers/Admin.php',
+        'Admin\\Issued' => __DIR__ . '/../..' . '/app/controllers/Admin.php',
+        'Admin\\Request' => __DIR__ . '/../..' . '/app/controllers/Admin.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Controller\\Login' => __DIR__ . '/../..' . '/app/controllers/Loginregister/login.php',
-        'Controller\\Ok' => __DIR__ . '/../..' . '/app/controllers/Loginregister/okbruh.php',
-        'Controller\\Register' => __DIR__ . '/../..' . '/app/controllers/Loginregister/register.php',
-        'Controller\\Signout' => __DIR__ . '/../..' . '/app/controllers/Loginregister/okbruh.php',
+        'Controller\\Login' => __DIR__ . '/../..' . '/app/controllers/login.php',
+        'Controller\\Ok' => __DIR__ . '/../..' . '/app/controllers/okbruh.php',
+        'Controller\\Register' => __DIR__ . '/../..' . '/app/controllers/register.php',
+        'Controller\\Signout' => __DIR__ . '/../..' . '/app/controllers/okbruh.php',
         'DB' => __DIR__ . '/../..' . '/app/models/db.php',
+        'Model\\Admin' => __DIR__ . '/../..' . '/app/models/admin.php',
         'Model\\Books' => __DIR__ . '/../..' . '/app/models/books.php',
         'Model\\Post' => __DIR__ . '/../..' . '/app/models/post.php',
         'Model\\User' => __DIR__ . '/../..' . '/app/models/user.php',
-        'User\\Issued' => __DIR__ . '/../..' . '/app/controllers/Loginregister/User.php',
-        'User\\NewIssue' => __DIR__ . '/../..' . '/app/controllers/Loginregister/User.php',
+        'User\\Issued' => __DIR__ . '/../..' . '/app/controllers/User.php',
+        'User\\NewIssue' => __DIR__ . '/../..' . '/app/controllers/User.php',
+        'User\\Pend' => __DIR__ . '/../..' . '/app/controllers/User.php',
+        'User\\Reject' => __DIR__ . '/../..' . '/app/controllers/User.php',
         'View\\Loader' => __DIR__ . '/../..' . '/app/views/loader.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc19b1d3021670f918da0082687739aa0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc19b1d3021670f918da0082687739aa0::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc19b1d3021670f918da0082687739aa0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf40dce9a2ab10705e16fff3be29bf0cb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf40dce9a2ab10705e16fff3be29bf0cb::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitf40dce9a2ab10705e16fff3be29bf0cb::$classMap;
 
         }, null, ClassLoader::class);
     }

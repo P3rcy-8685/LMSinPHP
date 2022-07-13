@@ -4,7 +4,7 @@ namespace Controller;
 
 class Login {
     public function get() {
-        echo \View\Loader::make()->render("templates/login.twig");
+        echo \View\Loader::make()->render("templates/Login/login.twig");
     }
 
     public function post() {

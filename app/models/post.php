@@ -9,7 +9,6 @@ class Post {
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetch();
-        print_r($rows[0][0]);
         if(count($rows)){
             print_r($rows);
             $pass=$pass.$rows['salt'];

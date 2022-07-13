@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'vrongmeal/mvc-lecture',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'c6a2a8857a66a13b22c60b0d8d21a60e97fb369b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -49,9 +49,9 @@
             'dev_requirement' => false,
         ),
         'vrongmeal/mvc-lecture' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'c6a2a8857a66a13b22c60b0d8d21a60e97fb369b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

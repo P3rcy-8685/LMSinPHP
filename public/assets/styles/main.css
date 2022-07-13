@@ -45,3 +45,11 @@ table{
   left:45%;
   color:antiquewhite;
 }
+#addform{
+  position:absolute;
+  top:20%;
+  left:45%;
+}
+table, th, td {
+  border: 1px solid white;
+}

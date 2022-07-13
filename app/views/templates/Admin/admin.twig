@@ -1,0 +1,20 @@
+{% extends "templates/base.twig" %}
+
+{% block title %}register Page{% endblock %}
+
+{% block body %}
+<h1>Welcome Admin Sirrrrrrr</h1>
+<li><a href="/" id="active">Home</a></li>
+<li><a href="/vrequest">View Requests</a></li>
+<li><a href="/areq">Admin Requests</a></li>
+<li><a href="/adminissue">Issued Books</a></li>
+<li><a href="/adminavail">View Available Books </a></li>
+<li><a href="/logout">Signout </a></li>
+<form action="/addbook" method="Post" id="addform">
+    <label for="code">Code  of Book</label>
+    <input type="text" name="code" id="code"><br>
+    <label for="book">Name_of_Book</label>
+    <input type="text" name="book" id="book"><br>
+    <input type="submit" class="btn btn-primary" value="Add"><br>
+</form>
+{% endblock %}
