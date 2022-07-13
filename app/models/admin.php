@@ -43,13 +43,4 @@ Class Admin{
         $rows=$stmt->fetchAll();
         return $rows;
     }
-
-    public function avail(){
-        $db = \DB::get_instance();
-        $query="Select * from books where quantity>0";
-        $stmt = $db->prepare($query);
-        $stmt->execute();
-        $rows=$stmt->fetchAll();
-        return $rows;
-    }
 }

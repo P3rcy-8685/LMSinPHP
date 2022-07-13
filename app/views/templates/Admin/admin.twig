@@ -3,18 +3,26 @@
 {% block title %}register Page{% endblock %}
 
 {% block body %}
+<div id="div">
+<ul class="nav">
+<li class="nav-item"><a href="/" id="active">Home</a></li>
+<li class="nav-item"><a  href="/vrequest">View Requests</a></li>
+<li class="nav-item"><a href="/areq">Admin Requests</a></li>
+<li class="nav-item"><a href="/adminissue">Issued Books</a></li>
+<li class="nav-item"><a href="/adminavail">View Available Books </a></li>
+<li class="nav-item"><a href="/logout">Signout </a></li></div>
+<div id="home"><br>
+<br>
 <h1>Welcome Admin Sirrrrrrr</h1>
-<li><a href="/" id="active">Home</a></li>
-<li><a href="/vrequest">View Requests</a></li>
-<li><a href="/areq">Admin Requests</a></li>
-<li><a href="/adminissue">Issued Books</a></li>
-<li><a href="/adminavail">View Available Books </a></li>
-<li><a href="/logout">Signout </a></li>
+<br><br>
+
 <form action="/addbook" method="Post" id="addform">
+<div class="form-group">
     <label for="code">Code  of Book</label>
-    <input type="text" name="code" id="code"><br>
+    <input type="text" name="code" id="code" class="form-control"><br></div>
+    <div class="form-group">
     <label for="book">Name_of_Book</label>
-    <input type="text" name="book" id="book"><br>
-    <input type="submit" class="btn btn-primary" value="Add"><br>
-</form>
+    <input type="text" name="book" class="form-control" id="book"><br></div>
+    <input type="submit" class="btn btn-light" value="Add" id="submit"><br>
+</form></div>
 {% endblock %}

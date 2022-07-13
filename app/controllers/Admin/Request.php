@@ -15,14 +15,14 @@
         }
         public function post(){
             $book=$_POST["name"];
-            $by=$_POST["issuedby"];
+            $user=$_POST["issueduser"];
             $approve=$_POST["aprove"];
             if($approve){
-                \Model\Books::deletereq($book,$by);
-                \Model\Books::insertissue($book,$by);
+                \Model\Books::deletereq($book,$user);
+                \Model\Books::insertissue($book,$user);
             }
             else{
-                \Model\Books::reject($book,$by);
+                \Model\Books::reject($book,$user);
             }
             header("Location:/vrequest");
 

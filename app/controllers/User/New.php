@@ -5,7 +5,7 @@
             session_start();
             if($_SESSION["user"]){
             echo \View\Loader::make()->render("templates/User/issueuser.twig", array(
-                "posts"=> \Model\Books::book(),
+                "posts"=> \Model\Books::available(),
             )); }
             else{
                 session_destroy();

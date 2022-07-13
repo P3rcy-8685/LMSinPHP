@@ -14,6 +14,7 @@ class Login {
         $pass=$pass.$row['salt'];
         $pass=hash('sha256',$pass);
         $row=\Model\Post::login($user,$pass);
+        print_r($row);
         if(count($row)){
             session_start();
             $_SESSION["user"]=$user;
@@ -32,6 +33,7 @@ class Login {
         else{
             echo "Incorrect UserName";
         }
+        print_r($_SESSION);
         header('Location: /');
 
     }

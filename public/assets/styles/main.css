@@ -1,58 +1,74 @@
 body{
-    background:#6F5E76;
-    color: #FFDDE2;
+    background-image: linear-gradient(to right, orange , white);
+    color: black;
+}
+#div{
+  background: white;
+  padding-bottom: 5px;
+  padding-top: 5px;
+
 }
 h1{
-    position: absolute;
-    left: 42%;
-    top:7%;
+  margin: auto;
+  width: 520px;
+  text-align: center; 
 }
 
 h2{
-    position: absolute;
-    left: 42%;
-    top:10%;
+  margin: auto;
+  width: 520px;
+  text-align: center; 
 }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    display: inline;
   }
 
 li {
   float: right;
+  display: inline;
+
 }
 li a {
   display: block;
-  color: #FFDDE2;
-  background-color: #FF8CC6;
+  color: black;
   text-align: center;
   padding: 8px 10px;
   text-decoration: none;
 }
 li a:hover {
-  background-color: #EFD6D2;
+  background-color: rgb(207, 117, 0);
 }
 #active{
-    background-color: #DE369D;
-}
-table{
-  position:absolute;
-  top:40%;
-  left:45%;
-  color:#FFDDE2;
-}
-#addform{
-  position:absolute;
-  top:20%;
-  left:45%;
+    color: orange;
+    background-color: white;
 }
 table, th, td {
   border: 1px solid white;
+  margin: auto;
+  text-align: center; 
+
+}
+#table{
+  width:50%;
 }
 form{
   margin: auto;
   width: 220px;
   text-align: center; 
 }
+#submit:hover{
+  background-color: rgb(236, 207, 152);
+}
+div#home{
+  
+  background-color:black;
+  position: fixed; /* could be absolute */
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+color:white}

@@ -3,22 +3,32 @@
 {% block title %}register Page{% endblock %}
 
 {% block body %}
-<ul style="display:inline">
-<li><a href="/login" >Login</a></li>
-<li><a href="/register" id="active">Register</a></li>
+<div id="div">
+<ul class="nav">
+<li class="nav-item"><a href="/login" class="nav-link" aria-current="page" >Login</a></li>
+<li class="nav-item"><a href="/register" class="nav-link active" id="active">Register</a></li>
 </ul>
+</div>
+<br><br><br><br>
+<div id="home"><br>
 <h1>Hello and Welcome!</h1>
-<br><br><br><br><br><br><br>
+<br>
     <form action="/register" method="post">
+    <div class="form-group">
+
         <label for="name" id="ulabel">Name </label>
-        <input type="text" name="name" id="uname""><br><br>
+        <input type="text" name="name" class="form-control"><br></div>
         <div class="form-group">
-        <label for="password" id="plabel">Password</label>
-        <input type="password" name="password" id="pass" ><br><br>
-        <label for="enr" id="elabel">Enrollment Number</label>
-        <input type="text" name="enr" id="enr"><br><br>
+      <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" name="pass">
+  </div><br>
+<div class="form-group">
+<label for="enr">Enrollment:</label>
+<input type="text" class="form-control" name="enr">
+</div><br>
         <label for="admin" id="alabel">I am an Admin</label>
         <input type="radio" name="admin" value="2" id="admin"><br><br>
-        <input type="submit" class="btn btn-primary" value="Submit" id="submit">
-        </form> 
+        <input type="submit" class="btn btn-light" value="Submit" id="submit">
+        </form> </div>
 {% endblock %}

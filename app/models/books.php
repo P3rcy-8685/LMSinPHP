@@ -3,7 +3,7 @@
 namespace Model;
 
 Class Books{
-    public function book(){
+    public function available(){
         $db = \DB::get_instance();
         $query = "Select * from books where quantity>0";
         $stmt = $db->prepare($query);
@@ -49,23 +49,23 @@ Class Books{
             $stmt->execute();
     }
 
-    public function deletereq($book,$by){
+    public function deletereq($book,$user){
         $db = \DB::get_instance();
-        $query="Delete from requested where name='".$book."' and Issued_by='".$by."'";
+        $query="Delete from requested where name='".$book."' and Issued_by='".$user."'";
         $stmt = $db->prepare($query);
         $stmt->execute();
     }
 
-    public function insertissue($book,$by){
+    public function insertissue($book,$user){
         $db = \DB::get_instance();
-        $query="Insert into issued values('".$book."','".$by."')";
+        $query="Insert into issued values('".$book."','".$user."')";
         $stmt = $db->prepare($query);
         $stmt->execute();
     }
 
-    public function reject($book,$by){
+    public function reject($book,$user){
         $db = \DB::get_instance();
-        $query="Update requested set status='rejected' where name='".$book."' and Issued_by='".$by."'";
+        $query="Update requested set status='rejected' where name='".$book."' and Issued_by='".$user."'";
         $stmt = $db->prepare($query);
         $stmt->execute();
     }

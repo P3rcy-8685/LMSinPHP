@@ -3,25 +3,29 @@
 {% block title %}register Page{% endblock %}
 
 {% block body %}
-<h1>HELLO USER SIRRRRR</h1>
-<ul style="display:inline">
-<li><a href="/">My Books</a></li>
-<li><a href="/issue" id="active">Issue New Book Issued Books</a></li>
-<li><a href="/pending">View Pending Requests</a></li>
-<li><a href="/rejected">View Rejected Requests </a></li>
-<li><a href="/logout">Signout </a></li>
+<div id="div">
+<ul class="nav">
+<li class="nav-item"><a href="/">My Books</a></li>
+<li class="nav-item"><a href="/issue" id="active">Issue New Book</a></li>
+<li class="nav-item"><a href="/pending">View Pending Requests</a></li>
+<li class="nav-item"><a href="/rejected">View Rejected Requests </a></li>
+<li class="nav-item"><a href="/logout">Signout </a></li>
 </ul>
-<table>
-<tr>
-<th> Book Name </th>
-<th> Issue?</th>
+</div>
+<br><br><br><br>
+<h1>HELLO USER SIRRRRR</h1>
+<br><br><br><br>
+<table class="table table-dark table-striped" id="table">
+<tr >
+<th > Book Name </th>
+<th > Issue?</th>
 </tr>
 {% for post in posts %}
 <tr>
-    <td>{{post.Book}}</td>
+    <td >{{post.Book}}</td>
     <form action="/book" method="post">
     <input type="hidden" name="name" value={{post.Book}}>
-    <td><input type="submit" class="btn btn-primary" value="Put in request"><br></td></form>
+    <td ><input type="submit" id="submit" class="btn btn-light" value="Put in request"><br></td></form>
 
 
 </tr>

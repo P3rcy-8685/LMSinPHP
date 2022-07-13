@@ -3,16 +3,18 @@
 {% block title %}register Page{% endblock %}
 
 {% block body %}
+<div id="div">
+<ul class="nav">
+<li class="nav-item"><a href="/">Home</a></li>
+<li class="nav-item"><a id="active" href="/vrequest">View Requests</a></li>
+<li class="nav-item"><a href="/areq">Admin Requests</a></li>
+<li class="nav-item"><a  href="/adminissue">Issued Books</a></li>
+<li class="nav-item"><a href="/adminavail">View Available Books </a></li>
+<li class="nav-item"><a href="/logout">Signout </a></li></ul></div>
+<br><br><br><br>
 <h1>Welcome Admin Sirrrrrrr</h1>
-<ul>
-<li><a href="/" >Home</a></li>
-<li><a href="/vrequest" id="active">View Requests</a></li>
-<li><a href="/areq">Admin Requests</a></li>
-<li><a href="/adminissue">Issued Books</a></li>
-<li><a href="/adminavail">View Available Books </a></li>
-<li><a href="/logout">Signout </a></li>
-</ul>
-<table>
+<br><br><br><br>
+<table class="table table-dark table-striped" id="table">
 <tr>
 <th> Book Name </th>
 <th> Issued By?</th>
@@ -31,7 +33,7 @@
     <input type="radio" name="aprove" value="1">
     <label for="No">No</label>
     <input type="radio" name="aprove" value="0"><br></td>
-    <td><input type="submit" class="btn btn-primary" value="Confirm"><br></td></form>
+    <td><input type="submit" class="btn btn-light" value="Confirm" id="submit"><br></td></form>
 </tr>
 {% endfor %}
 

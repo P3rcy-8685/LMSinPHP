@@ -12,7 +12,7 @@ Class User{
         return $rows;
     }
 
-    public static function pend($user){
+    public static function pending($user){
         $db = \DB::get_instance();
         $query = "Select * from requested where Issued_by='".$user."' and status='requested'";
         $stmt = $db->prepare($query);

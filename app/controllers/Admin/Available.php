@@ -5,7 +5,7 @@
             session_start();
             if($_SESSION["admin"]){
             echo \View\Loader::make()->render("templates/Admin/avail.twig", array(
-                "posts"=> \Model\Admin::avail(),
+                "posts"=> \Model\Books::available(),
             ));}
             else{
                 session_destroy();

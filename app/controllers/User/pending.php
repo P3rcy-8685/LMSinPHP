@@ -6,7 +6,7 @@
             if($_SESSION["user"]){
             $user=$_SESSION["user"];
             echo \View\Loader::make()->render("templates/User/userpending.twig", array(
-                "posts"=> \Model\User::pend($user),
+                "posts"=> \Model\User::pending($user),
             )); }
             else{
                 session_destroy();
