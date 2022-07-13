@@ -1,0 +1,23 @@
+{% extends "templates/base.twig" %}
+
+{% block title %}register Page{% endblock %}
+
+{% block body %}
+<h1>HELLO USER SIRRRRR</h1>
+<ul style="display:inline">
+<li><a href="/" id="active">My Books</a></li>
+<li><a href="/issue">Issue New Book Issued Books</a></li>
+<li><a href="/pending">View Pending Requests</a></li>
+<li><a href="/rejected">View Rejected Requests </a></li>
+<li><a href="/logout">Signout </a></li>
+</ul>
+<table>
+<tr>
+<th> Book Name
+</tr>
+{% for post in posts %}
+<tr>
+    <td>{{post.name}}</td>
+</tr>
+{% endfor %}
+{% endblock %}

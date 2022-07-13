@@ -1,0 +1,47 @@
+body{
+    background:black;
+    color: aliceblue;
+}
+h1{
+    color: aliceblue;
+    position: absolute;
+    left: 42%;
+    top:7%;
+}
+
+h2{
+    position: absolute;
+    left: 42%;
+    top:10%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+  }
+
+  li {
+    float: right;
+  }
+  li a {
+    display: block;
+    color: rgb(95, 95, 95);
+    background-color: rgb(141, 191, 235);
+    text-align: center;
+    padding: 8px 10px;
+    text-decoration: none;
+  }
+    li a:hover {
+        background-color: #111;
+      }
+#active{
+    background-color: cyan;
+}
+table{
+  position:absolute;
+  top:40%;
+  left:45%;
+  color:antiquewhite;
+}

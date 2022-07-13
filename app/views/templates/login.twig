@@ -1,0 +1,17 @@
+{% extends "templates/base.twig" %}
+
+{% block title %}Login Page{% endblock %}
+
+{% block body %}
+<h1>Hello and Welcome!</h1>
+{% if registered %}
+<h2> Registed Successfully </h2>
+{% endif %}
+<form action="/login" method="post">
+        <label for="uname" id="ulabel">Username</label>
+        <input type="text" name="uname" id="uname"><br>
+        <label for="pass" id="plabel">Password</label>
+        <input type="password" name="pass" id="pass"><br>
+        <input type="submit" class="btn btn-primary" value="Login" id="submit"></form> <br>
+        <a href="/register" id="register"> <button> Register Here</button></a>
+{% endblock %}
