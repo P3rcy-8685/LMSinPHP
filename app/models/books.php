@@ -47,24 +47,26 @@ Class Books{
             $query="Insert into books values(".$bookcode.",'".$book."',1)";
             $stmt = $db->prepare($query);
             $stmt->execute();
-        }
+    }
 
     public function deletereq($book,$by){
         $db = \DB::get_instance();
         $query="Delete from requested where name='".$book."' and Issued_by='".$by."'";
         $stmt = $db->prepare($query);
-        $stmt->execute();}
+        $stmt->execute();
+    }
 
     public function insertissue($book,$by){
+        $db = \DB::get_instance();
         $query="Insert into issued values('".$book."','".$by."')";
         $stmt = $db->prepare($query);
         $stmt->execute();
-        }
+    }
 
     public function reject($book,$by){
+        $db = \DB::get_instance();
         $query="Update requested set status='rejected' where name='".$book."' and Issued_by='".$by."'";
-        echo $query;
         $stmt = $db->prepare($query);
         $stmt->execute();
-        }
+    }
 }

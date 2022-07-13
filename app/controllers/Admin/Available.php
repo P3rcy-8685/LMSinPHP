@@ -1,8 +1,8 @@
 <?php
     namespace Admin;
-    session_start();
     Class Available{
         public function get(){
+            session_start();
             if($_SESSION["admin"]){
             echo \View\Loader::make()->render("templates/Admin/avail.twig", array(
                 "posts"=> \Model\Admin::avail(),

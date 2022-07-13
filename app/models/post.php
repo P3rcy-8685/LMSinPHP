@@ -25,5 +25,6 @@ class Post {
         $db = \DB::get_instance();
         $query="Insert into user values('".$enr."','".$pass."','".$name."','".$salt."',".$admin.")";
         $stmt = $db->prepare($query);
-        $stmt->execute();}
+        $stmt->execute();
+    }
 }

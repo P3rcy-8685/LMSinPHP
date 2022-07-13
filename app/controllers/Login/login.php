@@ -16,7 +16,7 @@ class Login {
         $row=\Model\Post::login($user,$pass);
         if(count($row)){
             session_start();
-            $_SESSION["user"]=1;
+            $_SESSION["user"]=$user;
             $admin=$row["admin"];
             if($admin==1){
                 $_SESSION["admin"]=TRUE;

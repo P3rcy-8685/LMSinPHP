@@ -3,7 +3,7 @@
     session_start();
     class Issued{
         public function post(){
-            if($_Session["user"]){
+            if($_SESSION["user"]){
             $user=$_SESSION["user"];
             echo \View\Loader::make()->render("templates/User/homeuser.twig", array(
                 "posts"=> \Model\User::issued($user),

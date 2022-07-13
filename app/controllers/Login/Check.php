@@ -1,8 +1,8 @@
 <?php
 namespace Controller;
-session_start();
-class Ok {
+class Check {
     public static function get(){
+        session_start();
     if(isset($_SESSION['user'])){
         if($_SESSION["admin"]){
         echo \View\Loader::make()->render("templates/Admin/admin.twig");
@@ -18,4 +18,3 @@ else{
     header("Location:/login");}
 }
 }
-?>

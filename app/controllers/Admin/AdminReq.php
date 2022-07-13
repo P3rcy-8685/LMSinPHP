@@ -1,8 +1,9 @@
 <?php
     namespace Admin;
-    session_start();
     Class Adminreq{
         public function get(){
+            session_start();
+
             if($_SESSION["admin"]){
             echo \View\Loader::make()->render("templates/Admin/adminrequest.twig", array(
                 "posts"=> \Model\Admin::areq(),

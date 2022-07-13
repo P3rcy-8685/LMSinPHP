@@ -1,8 +1,8 @@
 <?php
     namespace User;
-    session_start();
-    Class Pend{
+    Class Pending{
         public function get(){
+            session_start();
             if($_SESSION["user"]){
             $user=$_SESSION["user"];
             echo \View\Loader::make()->render("templates/User/userpending.twig", array(

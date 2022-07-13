@@ -3,14 +3,14 @@
 require __DIR__."/../vendor/autoload.php";
 
 Toro::serve(array(
-    "/"=>"\Controller\Ok",
+    "/"=>"\Controller\Check",
     "/login" => "\Controller\Login",
     "/register" => "\Controller\Register",
     "/issued" => "\User\Issued",
     "/issue" =>"\User\NewIssue",
     "/rejected"=>"\User\Reject",
     "/logout"=> "\Controller\Signout",
-    "/pending"=>"\User\Pend",
+    "/pending"=>"\User\Pending",
     "/book"=>"\User\NewIssue",
     "/addbook"=>"\Admin\Add",
     "/vrequest"=>"\Admin\Request",

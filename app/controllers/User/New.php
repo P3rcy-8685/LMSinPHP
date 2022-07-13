@@ -1,8 +1,8 @@
 <?php
     namespace User;
-    session_start();
     class NewIssue{
-        public function get(){
+        public function get(){            
+            session_start();
             if($_SESSION["user"]){
             echo \View\Loader::make()->render("templates/User/issueuser.twig", array(
                 "posts"=> \Model\Books::book(),
@@ -13,6 +13,7 @@
             }
         }
         public function post(){
+            session_start();
             $name=$_POST["name"];
             $user=$_SESSION["user"];
             \Model\Books::quantitydec($name);

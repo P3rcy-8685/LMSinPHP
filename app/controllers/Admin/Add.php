@@ -1,7 +1,5 @@
 <?php
     namespace Admin;
-    session_start();
-
     class Add {
         public function post(){
             $bookcode=$_POST["code"];

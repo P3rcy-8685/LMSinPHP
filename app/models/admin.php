@@ -9,7 +9,8 @@ Class Admin{
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();
-        return $rows;}
+        return $rows;
+    }
 
     public function areq(){
         $db = \DB::get_instance();
@@ -17,19 +18,22 @@ Class Admin{
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();
-        return $rows;}
+        return $rows;
+    }
 
     public function adminapprove($user){
         $db = \DB::get_instance();
         $query = "update user set admin=1 where Name='".$user."'";
         $stmt = $db->prepare($query);
-        $stmt->execute();}
+        $stmt->execute();
+    }
 
     public function adminreject($user){    
         $db = \DB::get_instance();
         $query = "update user set admin=0 where Name='".$user."'";
         $stmt = $db->prepare($query);
-        $stmt->execute();}
+        $stmt->execute();
+    }
 
     public function issued(){
         $db = \DB::get_instance();
@@ -37,7 +41,8 @@ Class Admin{
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();
-        return $rows;}
+        return $rows;
+    }
 
     public function avail(){
         $db = \DB::get_instance();
@@ -45,5 +50,6 @@ Class Admin{
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();
-        return $rows;}
+        return $rows;
+    }
 }
