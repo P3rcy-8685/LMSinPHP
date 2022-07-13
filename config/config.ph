@@ -1,1 +1,0 @@
-$DB_PASSWORD="Vansh@2511";

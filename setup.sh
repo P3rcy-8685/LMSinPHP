@@ -16,7 +16,7 @@ read DB_USERNAME
 echo "\$DB_USERNAME=\"${DB_USERNAME}\";" >> config.php
 echo "Enter the password for the mysql server: "
 read DB_PASSWORD
-echo "\$DB_PASSWORD=\"${DB_PASSWORD}\";" >> config.ph
+echo "\$DB_PASSWORD=\"${DB_PASSWORD}\";" >> config.php
 echo "?>" >> config.php
 cd ..
 mysql -u $DB_USERNAME -p $DB_NAME < schema/schema.sql

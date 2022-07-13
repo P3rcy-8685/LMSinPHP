@@ -20,20 +20,20 @@ ul {
     overflow: hidden;
   }
 
-  li {
-    float: right;
-  }
-  li a {
-    display: block;
-    color: #FFDDE2;
-    background-color: #FF8CC6;
-    text-align: center;
-    padding: 8px 10px;
-    text-decoration: none;
-  }
-    li a:hover {
-        background-color: #EFD6D2;
-      }
+li {
+  float: right;
+}
+li a {
+  display: block;
+  color: #FFDDE2;
+  background-color: #FF8CC6;
+  text-align: center;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #EFD6D2;
+}
 #active{
     background-color: #DE369D;
 }
@@ -53,6 +53,6 @@ table, th, td {
 }
 form{
   margin: auto;
-   width: 220px;
-   text-align: center; 
+  width: 220px;
+  text-align: center; 
 }
