@@ -5,7 +5,7 @@ namespace Model;
 Class User{
     public static function issued($user){
         $db = \DB::get_instance();
-        $query = "Select * from issued where Issued_by='".$user."'";
+        $query = "Select name from issued where Issued_by='".$user."'";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();
@@ -14,7 +14,7 @@ Class User{
 
     public static function pending($user){
         $db = \DB::get_instance();
-        $query = "Select * from requested where Issued_by='".$user."' and status='requested'";
+        $query = "Select  from requested where Issued_by='".$user."' and status='requested'";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();

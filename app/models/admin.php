@@ -37,7 +37,7 @@ Class Admin{
 
     public function issued(){
         $db = \DB::get_instance();
-        $query="Select * from issued";
+        $query="Select name,Issued_by from issued";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();

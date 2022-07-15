@@ -28,7 +28,7 @@ Class Books{
 
     public function check($name){
         $db = \DB::get_instance();
-        $query="select exists(select * from books where Book='".$name."')";
+        $query="select exists(select Book from books where Book='".$name."')";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetch();
