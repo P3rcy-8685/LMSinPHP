@@ -11,9 +11,9 @@
             }
             else{
             \Model\Books::add($bookcode,$book);
-        }
+            }
         header("Location:/");
+        }
     }
-}
   
    

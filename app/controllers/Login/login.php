@@ -1,7 +1,6 @@
 <?php
 
 namespace Controller;
-
 class Login {
     public function get() {
         echo \View\Loader::make()->render("templates/Login/login.twig");
@@ -9,12 +8,11 @@ class Login {
     public function post() {
         $user = $_POST["uname"];
         $pass=$_POST["pass"];
-        $row=\Model\Post::salt($user);
+        $row=\Model\Login::salt($user);
         if(count($row)){
         $pass=$pass.$row['salt'];
         $pass=hash('sha256',$pass);
-        $row=\Model\Post::login($user,$pass);
-        print_r($row);
+        $row=\Model\Login::login($user,$pass);
         if(count($row)){
             session_start();
             $_SESSION["user"]=$user;
@@ -33,7 +31,6 @@ class Login {
         else{
             echo "Incorrect UserName";
         }
-        print_r($_SESSION);
         header('Location: /');
 
     }

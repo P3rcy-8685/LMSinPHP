@@ -5,7 +5,7 @@ namespace Model;
 Class Books{
     public function available(){
         $db = \DB::get_instance();
-        $query = "Select * from books where quantity>0";
+        $query = "Select Book from books where quantity>0";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();

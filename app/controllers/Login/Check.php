@@ -5,16 +5,17 @@ class Check {
         session_start();
     if(isset($_SESSION['user'])){
         if($_SESSION["admin"]){
-        echo \View\Loader::make()->render("templates/Admin/admin.twig");
-    }
+        echo \View\Loader::make()->render("templates/Admin/home.twig");
+        }      
         else{
-            echo \View\Loader::make()->render("templates/User/homeuser.twig",array(
+            echo \View\Loader::make()->render("templates/User/home.twig",array(
                 "posts"=>\Model\User::Issued($_SESSION["user"])
         
-            ));
+                    )
+                );
+            }
     }
-}
-else{
-    header("Location:/login");}
-}
+    else{
+        header("Location:/login");}
+    }
 }

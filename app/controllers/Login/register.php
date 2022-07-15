@@ -26,11 +26,13 @@ class Register {
         }
         $rand=generateRandomString();
         $pass=$pass.$rand;
-        $pass=hash('sha256',$pass);
-        \Model\Post::register($name,$pass,$enr,$admin,$rand);
+        $hash=hash('sha256',$pass);
+        \Model\Login::register($name,$hash,$enr,$admin,$rand);
+
         echo \View\Loader::make()->render("templates/Login/login.twig", array(
             "registered"=>TRUE,
-        ));
+            )
+        );
 
     }
 }

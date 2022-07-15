@@ -6,7 +6,9 @@
             if($_SESSION["admin"]){
             echo \View\Loader::make()->render("templates/Admin/adminrequest.twig", array(
                 "posts"=> \Model\Admin::areq(),
-            ));}
+                )      
+              );
+            }
             else{
                 session_destroy();
                 echo \View\Loader::make()->render("templates/Login/login.twig");
@@ -23,4 +25,5 @@
 
             }
             header("Location:/areq");
-        }}
+        }
+    }

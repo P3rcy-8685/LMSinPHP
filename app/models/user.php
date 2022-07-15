@@ -23,7 +23,7 @@ Class User{
 
     public static function reject($user){
         $db = \DB::get_instance();
-        $query = "Select * from requested where Issued_by='".$user."' and status='rejected'";
+        $query = "Select name from requested where Issued_by='".$user."' and status='rejected'";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();

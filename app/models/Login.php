@@ -2,7 +2,7 @@
 
 namespace Model;
 session_start();
-class Post {
+class Login {
     public static function salt($user){
         $db = \DB::get_instance();
         $query = "Select salt from user where enrol='".$user."'";
@@ -21,9 +21,9 @@ class Post {
         return $rows;
     }
 
-    public static function register($name,$pass,$enr,$admin,$salt) {
+    public static function register($name,$hash,$enr,$admin,$salt) {
         $db = \DB::get_instance();
-        $query="Insert into user values('".$enr."','".$pass."','".$name."','".$salt."',".$admin.")";
+        $query="Insert into user values('".$enr."','".$hash."','".$name."','".$salt."',".$admin.")";
         $stmt = $db->prepare($query);
         $stmt->execute();
     }

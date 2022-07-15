@@ -7,12 +7,15 @@
             if($_SESSION["admin"]){
             echo \View\Loader::make()->render("templates/Admin/request.twig", array(
                 "posts"=> \Model\Admin::req(),
-            ));}
+                    )
+                );
+            }
             else{
                 session_destroy();
                 echo \View\Loader::make()->render("templates/Login/login.twig");
             }
         }
+
         public function post(){
             $book=$_POST["name"];
             $user=$_POST["issueduser"];
@@ -26,4 +29,5 @@
             }
             header("Location:/vrequest");
 
-        }}
+        }
+    }

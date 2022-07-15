@@ -5,7 +5,7 @@ namespace Model;
 Class Admin{
     public function req(){
         $db = \DB::get_instance();
-        $query = "Select * from requested where status='requested'";
+        $query = "Select name.Issued_by from requested where status='requested'";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();
@@ -14,7 +14,7 @@ Class Admin{
 
     public function areq(){
         $db = \DB::get_instance();
-        $query = "Select * from user where admin=-1";
+        $query = "Select Name from user where admin=-1";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();
