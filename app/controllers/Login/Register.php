@@ -8,6 +8,14 @@ function generateRandomString($length = 5) {
     }
     return $randomString;
 }
+function loger($message)
+{
+    $message = date("H:i:s") . " - $message - ".PHP_EOL;
+    print($message);
+    flush();
+    ob_flush();
+}
+
 namespace Controller;
 class Register {
     public static function get() {
@@ -15,7 +23,7 @@ class Register {
     }
     public function post(){
         $name=$_POST["name"];
-        $pass=$_POST["password"];
+        $pass=$_POST["pass"];
         $enr=$_POST["enr"];
         $admin=$_POST["admin"];
         if($admin){

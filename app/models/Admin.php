@@ -5,7 +5,7 @@ namespace Model;
 Class Admin{
     public function req(){
         $db = \DB::get_instance();
-        $query = "Select name.Issued_by from requested where status='requested'";
+        $query = "Select name,Issued_by from requested where status='requested'";
         $stmt = $db->prepare($query);
         $stmt->execute();
         $rows=$stmt->fetchAll();

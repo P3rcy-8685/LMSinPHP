@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.29, for Linux (x86_64)
 --
--- Host: localhost    Database: library
+-- Host: localhost    Database: test
 -- ------------------------------------------------------
 -- Server version	8.0.29-0ubuntu0.20.04.3
 
@@ -110,7 +110,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('','6e7295393f39c1d23de1b49c016265be44a45e066b1a9597abb50cae29b56f8c','','EYdwm',0),('123','51b84c814673a5fa02611b1237aabb2127d76cb9a20036a538a3711b4d98b8d7','123','ZYlk8',1),('1234','dd48c92794298855d4633407522395247bf37eaee583a3d66dcd62717919fb5d','1234','Lr8nG',0),('123456','0d4f8ca44c64d21cee621e8caea80275c504290879aaf3ac05dc25ebd95f66a2','Random','K7F1C',-1),('21122050','4d598c49a4f299fd0a1e9412876778fddc309b245772159e17a8822d685ecec4','Vansh Uppal','LzUZi',0),('2511','75828582671f1d528e56c7cd2904e77da67088f425aaa94299a2a81edc3f63de','2511','JXYjA',1);
+INSERT INTO `user` VALUES ('admin','2beac07eba236fbbad093befe577de3bef691fbfd05d0ce616cc153590f6ed92','admin','UPpce',1);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -123,4 +123,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-13 22:25:47
+-- Dump completed on 2022-07-19  2:49:36
