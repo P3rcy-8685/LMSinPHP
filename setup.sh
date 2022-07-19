@@ -1,3 +1,6 @@
+FILE=config/config.php
+$PORT
+if [ ! -f "$FILE" ]; then
 rm -rf vendor/*
 composer install
 composer dump-autoload
@@ -20,3 +23,8 @@ echo "\$DB_PASSWORD=\"${DB_PASSWORD}\";" >> config.php
 echo "?>" >> config.php
 cd ..
 mysql -u $DB_USERNAME -p $DB_NAME < schema/schema.sql
+fi
+cd public
+echo "Enter the Port for the localhost server: "
+read PORT
+php -S localhost:${PORT}
